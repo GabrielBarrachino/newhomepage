@@ -1,0 +1,185 @@
+:root{
+    /* Primary */
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+
+    /* Neutral */
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+.mainContainer{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.contentLeft{
+    width: 100%;
+    max-width: 63rem;
+    margin-right: 2rem;
+}
+
+.contentLeft .contentBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.contentLeft .contentBottom h1{
+    font-size: 4rem;
+    color: var(--veryDarkBlue);
+    line-height: 4rem;
+    font-weight: 800;
+    width: 100%;
+    max-width: 28rem;
+}
+
+.contentLeft .contentBottom .texts{
+    width: 100%;
+    max-width: 25rem;
+}
+
+.contentLeft .contentBottom .texts p{
+    line-height: 1.5rem;
+    color: var(--darkGrayishBlue);
+    font-size: 1.1rem;
+}
+
+.contentLeft .contentBottom .texts a{
+    background: var(--softRed);
+    color: var(--offWhite);
+    font-size: 1.1rem;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    max-width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .3s ease;
+    margin-top: 2rem;
+}
+
+.contentLeft .contentBottom .texts a:hover{
+    background-color: var(--veryDarkBlue);
+}
+
+/* Conteudo da direita */
+.contentRight{
+    width: 100%;
+    max-width: 22rem;
+    background-color: var(--veryDarkBlue);
+}
+
+.contentRight .contentBox{
+    padding: 2rem;
+}
+
+.contentRight .contentBox h3{
+    color: var(--softOrange);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contentRight .contentBox .contentMenuSide:not(:last-child){
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.contentRight .contentBox .contentMenuSide:not(:last-child) p{
+    padding-bottom: 2rem;
+}
+
+.contentRight .contentBox .contentMenuSide:not(:last-child)::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--darkGrayishBlue);
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.contentRight .contentBox .contentMenuSide a{
+    color: var(--offWhite);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: .4s;
+}
+
+.contentRight .contentBox .contentMenuSide a:hover{
+    color: var(--softOrange);
+}
+
+.contentRight .contentBox .contentMenuSide p{
+    color: var(--grayishBlue);
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    /* padding-bottom: 2rem; */
+    line-height: 25px;
+}
+
+@media (max-width: 1180px){
+    .contentLeft .contentBottom{
+        align-items: flex-start;
+    }
+    .contentLeft .contentBottom h1{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 1050px){
+    .contentLeft .contentBottom .texts a{
+        font-size: .8rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 950px){
+    .mainContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .contentLeft{
+        margin-right: 0;
+    }
+    .contentRight .contentBox h3{
+        font-size: 2rem;
+    }
+    .contentRight .contentBox{
+        padding: 1.4rem;
+    }
+}
+
+@media (max-width: 600px){
+    .contentLeft .contentBottom{
+        flex-direction: column;
+    }
+    .contentLeft .contentBottom h1{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    .contentLeft .contentBottom .texts p{
+        margin-top: 1rem;
+        line-height: 1.2rem;
+        font-size: .9rem;
+    }
+    .contentLeft .image img{
+        height: 15rem;
+        object-fit: cover;
+    }
+    .contentRight .contentBox h3{
+        font-size: 1.7rem;
+    }
+    .contentRight .contentBox .contentMenuSide a{
+        font-size: 1rem;
+    }
+    .contentRight .contentBox .contentMenuSide p{
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+}

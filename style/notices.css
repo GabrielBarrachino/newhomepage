@@ -1,0 +1,89 @@
+:root{
+    /* Primary */
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+
+    /* Neutral */
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+.noticesContainer {
+    margin-top: 4rem;
+}
+
+.noticesContainer .noticeBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.noticesContainer .noticeBox .image{
+    margin-right: 1.5rem;
+}
+
+.noticesContainer .noticeBox .image img{
+    height: 9rem;
+}
+
+.noticesContainer .noticeBox .texts .number{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--grayishBlue);
+    margin-bottom: 1rem;
+}
+
+.noticesContainer .noticeBox .texts a{
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--veryDarkBlue);
+    transition: .3s;
+}
+
+.noticesContainer .noticeBox .texts a:hover{
+    color: var(--softRed);
+}
+
+.noticesContainer .noticeBox .texts p{
+    font-size: .9rem;
+    color: var(--darkGrayishBlue);
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 1080px){
+    .noticesContainer .noticeBox .image{
+        margin-right: 1rem;
+    }
+    .noticesContainer .noticeBox .image img{
+        max-width: 6rem;
+    }
+    .noticesContainer .noticeBox .texts .number{
+        font-size: 1.5rem;
+    }
+    .noticesContainer .noticeBox .texts a{
+        font-size: 1rem;
+    }
+    .noticesContainer .noticeBox .texts p{
+        font-size: .8rem;
+        color: var(--darkGrayishBlue);
+        margin-top: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 940px){
+    .noticesContainer {
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 450px){
+    .noticesContainer .noticeBox .image img{
+        max-width: 7rem;
+    }
+}

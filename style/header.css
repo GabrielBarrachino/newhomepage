@@ -1,0 +1,144 @@
+:root{
+    /* Primary */
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+
+    /* Neutral */
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+.btnMobile{
+    display: none;
+    padding: .7rem;
+    width: 100%;
+    max-width: 3.875rem;
+    max-height: 2.438rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContainer .contentHeader{
+    padding: 2.5rem 0;
+}
+
+.headerContainer .contentHeader .image{
+    width: 100%;
+    max-width: 3.875rem;
+    max-height: 2.438rem;
+}
+
+.headerContainer .contentHeader .navContent ul li a{
+    color: var(--darkGrayishBlue);
+    transition: all .3s;
+}
+
+.headerContainer .contentHeader .navContent ul li:not(:last-child){
+    margin-right: 2.5rem;
+}
+
+.headerContainer .contentHeader .navContent ul li a:hover{
+    color: var(--softOrange);
+}
+
+
+/* MENU MOBILE */
+.menuMobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.menuMobile .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.menuMobile aside{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform .3s;
+    background: var(--offWhite);
+}
+
+.menuMobile aside .contentHeader{   
+    position: relative;
+}
+
+.menuMobile aside .contentHeader .image{   
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .7rem;
+}
+
+.menuMobile aside .contentHeader .navContent{
+    padding-top: 10rem;
+}
+
+.menuMobile aside .contentHeader .navContent ul li a{
+    color: var(--darkGrayishBlue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: .7rem;
+}
+
+.menuMobile aside .contentHeader .navContent ul li:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.menuOpened{
+    overflow: hidden;  
+}
+.menuOpened .menuMobile{
+    opacity: 1;
+    pointer-events: all; 
+}
+.menuOpened .menuMobile aside{
+    transform: translateX(0%);
+}
+
+
+@media (max-width: 820px){
+    .btnMobile{
+        display: block;
+    }
+    .headerContainer .contentHeader .navContent ul li a{
+        display: none;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .headerContainer .contentHeader{
+        padding: 1.5rem 0;
+    }
+    .headerContainer .contentHeader .navContent ul li:not(:last-child){
+        margin-right: 0;
+    }
+    .headerContainer .contentHeader .image{
+        max-width: 3rem;
+    }
+}
