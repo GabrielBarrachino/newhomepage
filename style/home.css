@@ -28,6 +28,10 @@
     margin-top: 1.5rem;
 }
 
+.contentLeft .image img{
+    border-radius: 8px;
+}
+
 .contentLeft .contentBottom h1{
     font-size: 4rem;
     color: var(--veryDarkBlue);
@@ -60,6 +64,7 @@
     letter-spacing: 2px;
     transition: .3s ease;
     margin-top: 2rem;
+    border-radius: 8px;
 }
 
 .contentLeft .contentBottom .texts a:hover{
@@ -71,6 +76,7 @@
     width: 100%;
     max-width: 22rem;
     background-color: var(--veryDarkBlue);
+    border-radius: 8px;
 }
 
 .contentRight .contentBox{

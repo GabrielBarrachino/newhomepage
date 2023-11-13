@@ -26,6 +26,7 @@
 
 .noticesContainer .noticeBox .image img{
     height: 9rem;
+    border-radius: 8px;
 }
 
 .noticesContainer .noticeBox .texts .number{
