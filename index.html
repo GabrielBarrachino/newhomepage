@@ -172,8 +172,32 @@
                 </div>
             </div>
         </section>
+
+        <button class="btn btn-info" id="btnEnviarAlguem">Enviar para alguém</button>
     </main>
 
     <script src="script/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
+            const urlImovel = "{{ route('imovel', ['slug' => $anuncio->slug, 'id' => $anuncio->id]) }}";
+        
+            btnEnviarParaAlguem.addEventListener('click', function () {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Título do Compartilhamento',
+                        text: 'Texto adicional, se necessário',
+                        url: urlImovel
+                    }).then(() => {
+                        console.log('URL compartilhada com sucesso!');
+                    }).catch((error) => {
+                        console.error('Erro ao compartilhar:', error);
+                    });
+                } else {
+                    alert('Desculpe, o compartilhamento não é suportado neste navegador.');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
