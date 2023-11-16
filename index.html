@@ -179,23 +179,18 @@
     <script src="script/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
-            const urlImovel = window.location.href;
-        
-            btnEnviarParaAlguem.addEventListener('click', function () {
+        const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
+        const urlImovel = window.location.href;
+
+        btnEnviarParaAlguem.addEventListener('click', function () {
                 if (navigator.share) {
+                    const titlePag = document.title;
                     navigator.share({
-                        title: 'Título do Compartilhamento',
+                        title: titlePag,
                         text: 'Texto adicional, se necessário',
                         url: urlImovel
-                    }).then(() => {
-                        console.log('URL compartilhada com sucesso!');
-                    }).catch((error) => {
-                        console.error('Erro ao compartilhar:', error);
-                    });
-                } else {
-                    alert('Desculpe, o compartilhamento não é suportado neste navegador.');
-                }
+                    })
+                } 
             });
         });
     </script>
