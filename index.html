@@ -179,20 +179,20 @@
     <script src="script/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-        const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
-        const urlImovel = window.location.href;
+    const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
+    const urlImovel = window.location.href;
 
-        btnEnviarParaAlguem.addEventListener('click', function () {
-                if (navigator.share) {
-                    const titlePag = document.title;
-                    navigator.share({
-                        title: titlePag,
-                        text: 'Texto adicional, se necessário',
-                        url: urlImovel
-                    })
-                } 
-            });
+    btnEnviarParaAlguem.addEventListener('click', function () {
+            if (navigator.share) {
+                const titlePag = document.title;
+                navigator.share({
+                    title: titlePag,
+                    text: 'Confira este imóvel que achei na Imovel Guide!',
+                    url: urlImovel
+                })
+            } 
         });
+    });
     </script>
 </body>
 </html>
