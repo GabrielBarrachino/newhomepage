@@ -173,26 +173,8 @@
             </div>
         </section>
 
-        <button class="btn btn-info" id="btnEnviarAlguem">Enviar para alguém</button>
     </main>
 
     <script src="script/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const btnEnviarParaAlguem = document.getElementById('btnEnviarAlguem');
-    const urlImovel = window.location.href;
-
-    btnEnviarParaAlguem.addEventListener('click', function () {
-            if (navigator.share) {
-                const titlePag = document.title;
-                navigator.share({
-                    title: titlePag,
-                    text: 'Confira este imóvel incrivel que achei na Imovel Guide!',
-                    url: urlImovel
-                })
-            } 
-        });
-    });
-    </script>
 </body>
 </html>
